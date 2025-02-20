@@ -1,4 +1,4 @@
-import Swiper from 'swiper';
+
 import './_vendor';
 // import './_functions';
 // import './_components';
@@ -67,7 +67,6 @@ if (menuButton) {
 if (Swiper) {
   const swiper = new Swiper(".slider", {
     spaceBetween: 16,
-    hashNavigation: true,
     slidesPerView: 3,
     breakpoints: {
       768: {
