@@ -1,0 +1,85 @@
+// --------------- hex to rgba mixin ---------------
+@function HexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+:root {
+// --------------- default global variable ---------------
+  --body-bg: #f3ede0;
+  --footer-bg: #0C1323;
+  --body-font-size: 16px;
+  --header-h: 90px;
+  --content-width: 1728px;
+  --container-offset: 16px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --container-width-mode: calc(var(--content-width-mode) + (var(--container-offset) * 2));
+
+// --------------- default JS variable ---------------
+  --size: Min(24vw, 264px);
+// --------------- default JS tablet variable ---------------
+  @media (max-width: 1024px) {
+    --header-h: 64px;
+  }
+
+
+// ---------------- font - sizes --------------------------
+--t-xxs: 10px;
+--t-xs: 12px;
+--t-sm: 14px;
+--t-base: 16px;
+--t-md: 18px;
+--t-lg: 20px;
+--t-xl: 24px;
+--t-xxl: 26px;
+--t-xxl-2: 28px;
+--t-xxl-3: 32px;
+--t-xxl-4: 36px;
+// --------------- default scroll variable ---------------
+  --scrollbar-thumb: #6866F6;
+  --scrollbar-thumb-hover: #f6866F6ff;
+  --scrollbar-track:  #05031d;
+  --scrollbar-track-hover: #05031d;
+  --overlay-bg: rgba(0, 0, 0, 0.5);
+
+// --------------- default select variable ---------------
+  --select-inner-bg: #404040;
+  --select-inner-border: #FDFDFD;
+  --select-focus-border: #FDFDFD;
+
+// --------------- default font-family variable ---------------
+  --ff: "NeueMachina", sans-serif;
+  --ff-m: "Montserrat", sans-serif;
+  --ff-j: "Jost", sans-serif;
+// --------------- default text color variable ---------------
+  // --burger-cl: #{HexToRGB(#00d655)};
+
+--clr-b: #{HexToRGB(#000000)};
+--clr-w: #{HexToRGB(#ffffff)};
+--clr-pr: #{HexToRGB(#C38C40)};
+--clr-sec: #{HexToRGB(#3F2C30)};
+--clr-third: #{HexToRGB(#F2F2F2)};
+--clr-succ: #{HexToRGB(#008A05)};
+--clr-warning: #{HexToRGB(#F59725)};
+--clr-error: #{HexToRGB(#C13515)};
+--clr-blue_500: #{HexToRGB(#004CC4)};
+--clr-blue_800: #{HexToRGB(#001E4E)};
+--clr-blue_200: #{HexToRGB(#99B7E7)};
+--clr-dark-pr: #{HexToRGB(#2F2F2F)};
+--clr-text-pr: #{HexToRGB(#727272)};
+
+// --------------- default background clr variable ---------------
+--bg-b: #{HexToRGB(#030202)};
+--bg-light: #{HexToRGB(#FFFFFF)};
+--bg-dark: #{HexToRGB(#202020)};
+
+// --------------- default border cl variable ---------------
+--br-line: #{HexToRGB(#B9B9B9)}; // var(--br-a);
+
+// ---------------- transition ----------------------
+--delay-transition: cubic-bezier(.47,1.64,.41,.8);
+}
+
+@media (max-width: (767px)) {
+  :root {
+    --container-offset: 12px;
+  }
+}

@@ -1,0 +1,54 @@
+.advantages {
+  &-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 8px;
+  }
+  &-link {
+    --br-clr: #{HexToRGB(#DCDCDC)};
+    --hover-clr: var(--clr-b);
+    grid-gap: clamp(16px, 1.5vw, 24px);
+    justify-content: initial;
+
+    color: rgba(var(--clr-text-pr), 1);
+    line-height: 120%;
+  }
+}
+
+@include laptop {
+  .advantages {
+    &-items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@include tablet {
+  .advantages {
+    &-link {
+      font-size: 16px;
+    }
+  }
+}
+
+@include small-tablet {
+  .advantages {
+    &-items {
+      display: flex;
+      flex-direction: column;
+    }
+    &-link {
+      --h: 44px;
+      --p: 10px;
+    }
+  }
+}
+
+@include mobile {
+  .advantages {
+    &-link {
+      font-size: 14px;
+      grid-gap: 12px;
+    }
+  }
+}
